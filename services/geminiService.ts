@@ -8,7 +8,7 @@ const cleanJsonString = (text: string): string => {
 };
 
 export const rewritePost = async (originalContent: string, tone: string = "viral", customPersona: string = "", keywords: string = "") => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
   
   let systemInstruction = `Bạn là một chuyên gia Content Marketing hàng đầu tại Việt Nam.`;
   if (customPersona.trim()) {
